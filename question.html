@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Castor et Pollux Sombre</title>
+  </head>
+
+
+
+  <!--pour ne pas avoir a click => terminer la page precendente, tout refresh ici c'est vraiment ce qu'il faut faire pour que ma premiere et 2e page s enchaine bien !!! -->
+
+
+
+
+<section data-barba ="wrapper">
+    <article data-barba ="container" data-barba-namespace="question">
+  <body class="2"> <!--mettre padding margin 0 pour le fond -->
+
+
+      
+
+
+    <header class="headerTop"><!--  setup fixed (détaché du DOM) ++ full width -->
+       <div class=" content"><!-- marges en enfants ++ marges -->
+        <nav> <!-- space between -->
+          <div class="questionsMenu">
+<!--             <a href="#">
+              <svg viewBox="0 0 10 10" width="10px" height="10px" xmlns="http://www.w3.org/2000/svg">
+               <circle cx="5" cy="5" r="5"/>
+              </svg>  
+            </a> -->
+
+                    
+<!--             <a href="#">
+              <svg viewBox="0 0 10 10" width="10px" height="10px" xmlns="http://www.w3.org/2000/svg">
+               <circle cx="5" cy="5" r="5"/>
+              </svg>  
+            </a> -->
+            <a class="lienhover" href="#">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                     <circle cx="50" cy="50" r="30" stroke="black" stroke-width ="2px"  />
+                  </svg>
+            </a>
+
+            <a class="lienhover" href="#">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                   <circle cx="50" cy="50" r="30" />
+                </svg>
+            </a>
+
+             <a class="lienhover" href="#">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                   <circle cx="50" cy="50" r="30" />
+                </svg>
+            </a>
+
+          </div> <!--une image -->
+           <a id ="accueil" href="index.html">JADE PERESSON</a>   
+
+        </nav>
+      </div>
+    </header>
+
+
+
+    <main>
+      
+
+      <div style="background-color : var(--blanc_creme)" class="fond"> <!-- position relative et taille 100% 100vh -->
+        <div id="fin"><div id="transition"></div></div>
+          <div class="base"> <!-- display row pour align-content possible avec items ++ full width 100%100% pour hériter-->
+
+              <div class="row-centre content">
+               <div class="colomne gaucheqst"> <!--padding relative-->
+                <div class="label"> <span> Exemple :</span></div>
+                <div class="contexte colomne">
+                  <span>
+                  <span>"Les cibles ont été faites</span>
+                  <span>pour simuler une bataille</span>
+                  <span>entre "l'utilisateur", vous,</span>
+                  <span>et les objets volants sont..."</span>
+                 <!--display block qui peut se casser -->
+                </div>
+       
+              </div>
+
+              <div class="boutons colomne">
+
+              
+                <a href="reponse.html" class="demi-cercle-haut">
+                  <div class="colomneCentre" id="oui">
+                  <span>Plus de 4 et n’ont rien</span>
+                  <span>avoir avec ces cibles là</span>
+                 
+                </div>
+                </a>
+
+                <a href="reponse.html" class=demi-cercle-bas>
+                  <div class="colomneCentre" id="non">
+                    <span>Après mûre réflexion : 4,</span>
+                    <span>rapides, et donc, cools</span>    
+                  
+                </div>
+                </a>
+                
+
+              </div>
+            </div>
+
+          </div>
+
+
+      </div>
+
+
+    </main>
+
+
+    <div href="#" class="lienAmbulant"> 
+        
+        <svg
+          class="lienTourni"
+          transform ="scale(1)"
+          version="1.1"
+          baseProfile="full"
+          width="60"
+          transform
+          height="60"
+          xmlns="http://www.w3.org/2000/svg">
+          <!-- <circle id ="fondPath" cx="30" cy="30" r="25" stroke="var(--noir)" fill="transparent" /> -->
+          <!-- le r c'est le centre du cercle -->
+          <circle id ="lienCercle" cx="30" cy="30" r="1" fill="black"/>
+          <!-- stroke="var(--blanc)" stroke-width="0.135px -->
+          <path fill="none" id="textPath" d="
+            M 30, 30
+            m -30, 0
+            a 30,30 0 1,0 60,0
+            a 30,30 0 1,0 -60,0
+          "/>
+        <g font-size="13.1px">
+          <text text-anchor="start">
+            <textPath  xlink:href="#textPath" textLength="290%" startOffset="0%" class="rendBien"> un petit indice</textPath>
+          </text>
+         </g>
+
+        </svg>
+    </div>
+
+    <div href="#" class="fondBas"> 
+        
+        <svg
+          class="svgBas"
+          transform ="scale(1)"
+          version="1.1"
+          baseProfile="full"
+          width="60"
+          transform
+          height="60"
+          xmlns="http://www.w3.org/2000/svg">
+          <circle id ="lienCercle" cx="30" cy="30" r="1" fill="red" />
+          <path fill="none" id="textPath" d="
+            M 30, 30
+            m -30, 0
+            a 30,30 0 1,0 60,0
+            a 30,30 0 1,0 -60,0
+          "/>
+        </svg>
+    </div>
+
+
+
+      <div class="lienFond">
+   
+        <div class="flexColomneEloigne">
+          <div id="centrerlien">
+            <div class="colomneLienFond">
+              <h2 class="indiceTitre"> LES BONBONS</h2>
+              <div class="info paddingl">
+                Chaque dollar investi en UX se traduit par un
+                rendement entre 2 $ et 100 $. Si vous vouliez
+                avoir un aperçu du retour sur investissements UX,
+                le voici, en cliquant le lien en-dessous
+              </div>
+              <div class="boutCentre paddingl source">
+                      <p style ="margin-bottom : 10px">Source</p>
+                      <a href ="#"> 
+                        <!-- pour selectionner le texte en mode class, une div est necessaire pas dans a -->
+                        <div class="indice"></div>
+                        <div class="sourcea">
+                      abstract / https://www.thetimes.co.uk/article/i-m-so-sorry-says-inventor-of-endless-online-scrolling-9lrv59mdk
+                      >
+                        </div>
+                      </a>
+                </div>
+              </div>    
+
+          </div>
+          <div class="croix"> <!--non -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="m250.923-218.924-31.999-31.999L448.001-480 218.924-709.077l31.999-31.999L480-511.999l229.077-229.077 31.999 31.999L511.999-480l229.077 229.077-31.999 31.999L480-448.001 250.923-218.924Z"/></svg>
+          </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="espaceInventaireHaut">
+      <div class="inventaireHaut">
+
+
+      </div>
+    </div>    
+
+
+
+        <div id="background"></div>
+
+
+
+
+           
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+    <!-- jquery pour la page suivante et injection... plug-ins avec uniquement car ça bug sinon -->
+    <script src="/gsap-public/umd/MotionPathPlugin.js"></script>
+    <script src="/gsap-public/umd/ScrollTrigger.js"></script>
+    <script src="/gsap-public/umd/MotionPathPlugin.js"></script>
+
+
+    <script type="module" src="/scripts/lienHaut.js"></script>
+    <script type="module" src="/scripts/hover-questions.js"></script>
+    <script type="module" src="/scripts/reponse.js"></script> 
+    <script type="module" src="/transitions/question.js"></script>
+
+
+    
+    <script src="/gsap-public/umd/gsap.js"></script>
+  
+    
+
+  </body>
+
+</section>
+    </article>   
+
+
+
+
+
+</html>
+
+
+<!-- STROKE WIDTH 0 POUR LE CERCLE A ANIMATION -->

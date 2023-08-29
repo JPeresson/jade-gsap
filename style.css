@@ -1,0 +1,1692 @@
+@font-face {
+/*   font-family: "moul"; */
+  font-family: "moul";
+  font-weight: 300;
+  src: url("../fonts/moul-Regular.woff2");
+
+}
+
+@font-face {
+/*   font-family: "kodchasan-bold"; */
+  font-family: "kodchasan-bold";
+  src: url("../fonts/Kodchasan-Bold.woff2");
+
+}
+
+@font-face {
+/*   font-family: "Kodchasan-medium"; */
+  font-family: "kodchasan-medium";
+  src: url("../fonts/Kodchasan-Medium.woff2");
+
+}
+
+
+@font-face {
+/*   font-family: "doppioOne"; */
+  font-family: "doppioOne";
+  src: url("../fonts/DoppioOne-Regular.woff2");
+
+}
+
+:root {
+
+  --gris1 : #333;
+  --gris2 : #222;
+  --neutre : #FFF;
+
+  --dominante : #571414;
+  --blanc : #F7E4E1;
+  --rouge :  #730101;
+  --rose :  #FFB9B9;
+  --noir :  #180000;
+  --peche :  #F0BCB2;
+
+  --blanc_creme : #F7E4E1 ;
+  --rouge_profond : #980303  ;
+  --auburn : #260207 ;
+  --rouge_fond : #5F0D0D ;
+  --theme_clair : #F0BCB2 ;
+
+  --soda_typo : #811313 ;
+  --soda_fond : #520F0F ;
+
+
+
+}
+
+
+
+* {
+  top :  0;
+  left:  0;
+}
+
+
+body {
+  font-family: "doppioOne";
+  color : var(--blanc);
+
+  font-size: 0.70em;
+
+  padding: 0; /*   la base pour le fond */
+  margin: 0;
+
+  overflow: hidden;  /* solution de fortune pour que mes transitions ne dépassent pas
+/* il faudrait mettre l'objet de l'animation qui va depasser dans un div absolute à overflow hidden, => pas plus loin) */
+
+
+}
+
+a {
+  text-decoration: none;
+    color : var(--corps);
+
+}
+
+.textMenu {
+  color : var(--auburn);
+  letter-spacing: -1px;
+  font-family: "doppioOne";
+  font-size: 1.60em;
+}
+
+.content {
+  width: 92.5%;
+  margin: 0 auto;
+
+}
+
+.headerTop {
+  z-index: 10;
+  padding-top: 2.8em;
+  padding-bottom: 3.7em;
+  position: fixed;/*   ou absolute car ça ne bouge pas */
+  width: 100%; /* toujours en 100% ici pour mettre les marge apres */
+  color: var(--auburn);
+    
+
+}
+
+.headerTop nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  
+}
+
+.base {
+  width:100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+/*flex-direction: column; EMPECHE ALIGN CONTENT */
+  align-items: center;
+  align-content: center;
+
+}
+
+#centrerlien {
+  width:350px;
+}
+
+.centrer {
+  display: flex;
+  flex-direction: column; /*COLUMN A L'ENFANT */
+  align-items: center;
+/*   position: relative;
+  top: -14px; */
+
+}
+
+.colomne {
+  display: flex;
+  flex-direction: column; /*COLUMN A L'ENFANT */
+
+}
+
+.row {
+  display: flex;
+  flex-direction: row; /*COLUMN A L'ENFANT */
+  justify-content: space-between;
+
+}
+
+#fondGauche {
+  position: absolute;
+  transform-origin: left;
+  left: 0%;
+
+}
+
+#fondDroit {
+  position: absolute;
+  transform-origin: center right;
+  left: calc(100% - 160px);
+  
+  
+}
+
+#cibleBas1 {
+  position: absolute;
+  top: calc(116.5% - 22.5px);
+  left: calc(50% - 22.5px);  
+  transform-origin: 22.5px 22.5px;
+
+  height: 45px;
+  width: 45px;
+
+}
+
+#cibleHaut1 {
+  position: absolute;
+  top: calc(-20% - 25.5px); 
+/*   width/2 */
+  left: calc(50% - 25.5px);  
+/*   transform-origin: 50% 50%; */
+
+  height: 56px;
+
+}
+
+/* cible en bas */
+
+
+#cibleinterieur0 {
+  position: absolute;
+  left: calc(50% - 10.5px);  
+  top: calc(50% - 10.5px);  
+  transform-origin: center;
+  transform: scale(0);
+
+}
+
+/* cible en haut */
+
+#cibleinterieur1 { 
+  position: absolute;
+/*   width/2 */
+  top: calc(50% - 13px);  
+  left: calc(50% - 13px);  
+  transform-origin: center;
+  transform: scale(0);
+
+
+
+}
+
+
+
+#lignesInitiales1 {
+  position: absolute;
+  left: 50%;
+  top: -71%;
+  transform-origin: center;
+
+  transform: scale(0.7);
+  opacity: 0;
+
+}
+
+#lignesInitiales0 {
+  position: absolute;
+  left: 50%;
+  top: 92%;
+  transform-origin: center;
+
+  transform: scale(0.7);
+  opacity: 0;
+
+}
+
+#lignesInitialesHorizontale0 {
+  position: absolute;
+  left: calc(50% - 137.5px);
+  top: 116.5%;
+  transform-origin: center;
+
+  transform: scale(0.85);
+  opacity: 0;
+
+}
+
+.contexte span {
+  display: block;
+  font-family: "doppioOne";
+  font-weight: 400;
+  line-height: 33px;
+  font-size: 23.3px;
+  font-style: normal;
+}
+
+
+#lignesInitialesHorizontale1 {
+  position: absolute;
+  left: calc(50% - 143px);
+  top: -20.5%;
+  transform-origin: center;
+
+  transform: scale(0.85);
+  opacity: 0;
+
+}
+
+
+
+
+
+
+
+.boxAnimation {
+  position: relative;
+  overflow: hidden;
+  width: 1050px;
+
+/*   white-space: nowrap; */
+/*     transform: translate(-100%, 0%); */
+  padding-bottom: 13px;
+
+
+}
+
+#premierTitre {
+   font-family: "moul";
+   font-size: 7.45em;
+   font-weight: 300;
+
+   line-height: 1em;
+   text-align: center;
+   display: block;
+/*    height: 80px; */
+       margin: 0;
+
+
+  position: relative;
+  color:  var(--noir);
+
+  padding-left :  22px;
+  padding-right :  22px;
+  padding-top :  10.25px;
+
+
+  border-top: solid var(--rouge_profond) 4.5px ;
+  border-bottom: solid var(--rouge_profond) 4.5px ;
+  
+}
+
+.relative {
+  position: relative;
+}
+
+
+
+#accueil {
+/*   width: 150px; */
+
+  box-sizing: border-box;
+  border :  solid var(--rouge_profond) 2px;
+  border-radius :  5px;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 1px;
+  padding-left: 9px;
+  padding-right: 9px;
+  font-family: "moul";
+  font-size: 1.42em;
+}
+
+
+
+/* MISE EN PLACE DU SCROLL TEXT INFINI */
+
+.cb-tagreel-row {
+/*   le calcule se passe par le width */
+/*   width: 1050px;   */
+width: 100%;
+  display: flex;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.cb-tagreel-item {
+  position: relative;
+  line-height: 100%;
+  font-size: 2.6em;
+  flex: 0 0 25%;
+
+/*   important pour gérer l'espace */
+
+  text-transform: uppercase;
+}
+
+.cb-tagreel-item span:after {
+  content: "";
+  display: block;
+  position: absolute;
+/*   avec le width on fait la soustraction de la taille/2 rayon */
+  bottom: -4px;
+  left: 115%;
+  transform-origin: center;
+   width: 8px;
+  height: 8px;
+transform: translateY(-100%);
+    background: var(--rouge_profond);
+    border-radius: 50px;
+
+
+}
+
+.lignes {
+      content: "";
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(to right, #346abf 0%, #7096d2 100%);
+
+}
+
+
+.cb-tagreel-item span {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  font-family: "kodchasan-bold";
+  color : var(--rouge_profond);
+
+}
+/* MISE EN PLACE DU SCROLL TEXT INFINI */
+
+
+
+
+.headerBottom {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  position: fixed;
+  width: 100%; /* toujours en 100% ici pour mettre les marge apres */
+  top: 88%;
+/*   background-color: red; pour voir la hauteur de ma navigration*/
+   z-index: 10; /* event click*/
+
+}
+
+.fond {
+  top: 0;
+  left: 0;
+  width:105vw;
+  height: 100vh;
+  position: relative;
+/*   background-color: var(--dominante); 
+   background-color: var(--dominante); */
+
+}
+
+.headerBottom nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.navBottomBord {
+  display: flex;
+  align-items: center;
+}
+
+.awrapper {
+  padding-right: 75px;
+
+
+}
+
+.navBottomBord a {
+  list-style-type: none;
+
+}
+
+.lien {
+  left: -10vw;
+  position: relative;
+}
+
+.groupeLiens {
+  margin: 0;
+  padding: 0;
+}
+
+svg {
+  overflow : visible;
+}
+
+
+
+
+/* INDEXQ1 */
+
+.2 body  {
+  background-color: ;
+
+}
+
+
+.gaucheqst { /*liberte; */
+  position: relative;
+  top: -35px;
+
+  padding-left: calc(15px + 7%);
+  display: block;
+  width: 50%;
+
+}
+
+
+
+.label span {
+/*   pour avoir juste la bonne longueur */
+  font-family: Moul;
+font-size: 19.861px;
+font-style: normal;
+font-weight: 400;
+color :  var(--auburn);
+
+}
+
+
+.blanc {
+ color: var(--blanc);
+  font-family: "kodchasan-bold";
+  font-weight: 300;
+  fill :  var(--blanc);
+
+
+}
+
+.fauxblanc {
+/*   -webkit-filter: grayscale(1) invert(1);
+filter: grayscale(1) invert(1); */
+opacity: 0.75;
+height: 25px;
+width: auto;
+}
+
+.contexte {
+  padding-top: 11px;
+  text-align: left;
+  color: var(--noir);
+    font-family: "kodchasan-bold";
+    font-style: normal;
+  
+   font-weight: 900;
+    font-size:2.2em;
+    line-height: 1.25em;
+}
+
+.question {
+  padding-top: 36px;
+  text-align: left;
+  font-family: "kodchasan-bold";
+  font-weight: 600;
+  font-size:1.8em;
+  
+
+}
+
+.rose {
+  color: var(--rose) ;
+
+}
+
+
+
+.boutons {
+  width: 50%;
+
+  color: var(--auburn, #260207);
+  text-align: center;
+  font-family: "doppioOne";
+  font-size: 22.5px;
+
+}
+
+.boutons span {
+
+
+}
+
+.monFondLien {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+
+.lienAmbulant {
+/*   position: fixed; surtout pas sauf si c'est pour scroller avec, anims diff */
+position: absolute;
+  font-family: "Kodchasan-medium";
+    font-weight: 700;
+
+
+    z-index :  10;
+
+  transform-origin: center;
+/*   transform: scale(20); */
+  cursor: pointer;
+
+
+}
+
+.lienAmbulant textPath {
+  opacity: 1;
+  font-size :  18px;
+  fill: var(--rouge_profond);
+  font-family: "doppioOne";
+
+
+  
+}
+
+.lienTourni {
+   animation : rotation 6s linear infinite ;
+
+}
+
+.rotation {
+/*   animation : rotation 6s linear infinite  */
+
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.lienAmbulant path {
+  fill: transparent;
+
+
+
+}
+
+/* #fondPath {
+  stroke-width: 18.5px;
+} */
+
+/* .lienAmbulant svg {  */
+/*   le lienAmbulant bouge deja avec gsap, ne pas interferer; */
+/*   animation : rotation 6s linear infinite ; */
+/* } */
+
+
+
+
+.rendBien {
+  transform: rotate(90deg);
+}
+
+
+.fondBas {
+/*   position: fixed; surtout pas sauf si c'est pour scroller avec, anims diff */
+position: absolute;
+transform: translate(50vw, 150vh);
+
+
+    color: #000;
+    z-index : 1;
+
+  transform-origin: center;
+/*   transform: scale(20); */
+  
+
+}
+
+
+.questions {
+  fill: transparent;
+  stroke:black;
+
+}
+
+.questions a {
+  padding-right: 0.7em;
+  position: relative;
+  top: 10px;
+}
+
+
+.demi-cercle-haut {
+    border :  2px solid var(--auburn);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 220px;
+    border-radius: 14.5rem 14.5rem 0 0;
+ 
+    border: 2.5px solid var(--noir);
+    color: var(--dominante);
+    margin-bottom: 3.1vw;
+    transition: all 0.3s cubic-bezier(.29,.64,.82, 1.11) ;
+
+
+}
+
+.demi-cercle-haut span:nth-child(1) {
+  padding-top: 15%;
+}
+
+.demi-cercle-bas span:nth-child(2) {
+  padding-bottom: 15%;
+}
+
+
+
+
+
+.demi-cercle-bas {
+    border :  2px solid var(--auburn);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 220px;
+  
+    border-radius: 0 0 14.5rem 14.5rem;
+    transition: all 0.3s cubic-bezier(.29,.64,.82, 1.11) ;
+
+  
+    border: 2.5px solid var(--noir);
+    color: var(--dominante);
+
+
+}
+
+.demi-cercle-bas:hover {
+  background-color: var(--dominante);
+   color: var(--blanc_creme);
+
+
+
+}
+
+
+.demi-cercle-haut:hover {
+  background-color: var(--dominante);
+   color: var(--blanc_creme);
+
+}
+
+
+
+
+
+.colomneCentre {
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+
+}
+
+
+
+.row-centre {
+  display: flex;
+  flex-direction: row; /*COLUMN A L'ENFANT */
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+/* TOUTES LES REPONSES */
+
+.initialisation {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+
+.reponse {
+  width: 50%;
+  color :  var(--blanc_creme);
+
+}
+
+.resultatRep {
+  padding-right: 5%;
+  box-sizing: border-box;
+}
+
+.reponse h1 {
+  font-family: "moul";
+  font-size: 5em;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+ 
+  position: relative; /* le fix retire donne ça*/
+  transform-origin: center;
+/*   transform : translate(13vw, 35vh); */
+  
+}
+
+.reponse h1 span {
+  transform : translate(0, 35vh);
+  /* il faut selectionner le bon selector = gsap trigger, hérite.
+  La position x est plus facile :  0 pour que ca corresponde; */
+  
+}
+
+
+/* .h1SpaceReserve {
+  width:100%;
+  height: 115px;
+  background:grey;
+
+} */
+
+
+
+.fixed {
+
+    position: absolute;
+
+}
+
+.fixedTitre {
+
+    position: absolute; /*0 bug, pas fixed */
+ 
+    
+
+
+}
+
+.reponse h2 {
+  padding-top: 35px;
+
+}
+
+.imgtr {
+  top: 25% ;
+  left: calc(75% - 390px);
+
+
+
+}
+
+
+.reponse span {
+  display: block;
+  font-family: "kodchasan-bold";
+    font-style: normal;
+ 
+    font-size:1.3em;
+    line-height: 1.5em;
+  text-align: left;
+
+}
+
+
+.poursuivre {
+  height: auto;
+  width: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+
+  transform: translate(0, 100vh);
+}
+
+.detail {
+  transform: translate(0, 100vh);
+
+}
+
+
+.boutLarge {
+  width: 65%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.boutLarge p {
+  font-family: "Kodchasan-medium";
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+
+}
+
+.indice {
+  will-change: transform;
+    z-index: 99999;
+    position: absolute;
+    left: -2.45em;
+    top: 30%;
+    height: 7px;
+    width: 7px;
+    border-bottom-left-radius: 50%;
+    background: var(--blanc_creme);
+    transform-origin: right;
+    clip-path: polygon( 0 10%, 10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10% );
+    transition: transform .6s cubic-bezier(.33,1,.68,1) .1s;
+    transform: scale(0, 0);
+}
+
+
+.boutLarge a {
+  box-sizing: border-box;
+  padding-right: 10px;
+
+  font-family: "doppioOne";
+  font-size: 0.7em;
+  transition: all .4s cubic-bezier(0.2, 0.58, 0.58, 0.88);
+  transform-origin: left;
+  will-change: transform;
+  display: block; /*   il faut desplay block pour scale */
+  
+}
+
+.boutLarge a {
+  position: relative;
+
+}
+
+.boutLarge a:hover .indice {
+  transform: scale(1.1);
+
+}
+
+.boutLarge a:hover   {
+
+  transform: scale(1.033);
+  transition: 0.7s;
+
+
+}
+
+.alignementdroit:hover .boutonside { /*declencheur:hover objet anime ;*/
+  left: 35px; /* pas left et right ensemble */
+  opacity: 1;
+  
+}
+
+
+/* .boutLarge a:before:hover {
+  transform: scale(1.3, 1.3);
+
+} */
+
+
+
+
+
+.petitBout {
+  width:135px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  
+
+}
+
+.compris {
+  width: 100%;
+  height: 90%;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  background-color: var(--peche);
+  color: var(--rouge_fond);
+  border-radius: 8px;
+
+}
+
+
+.petitBout a {
+   font-family: 'moul';
+  font-size: 1.2em;
+
+  
+}
+
+.scrollContenu {
+  height: 85vh;
+  width: 95%;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  padding-right: 4vw;
+
+
+
+  transform: translate(0, 100vh);
+
+}
+
+.elAjuste {
+  height: auto;
+}
+
+#texteScroll {
+
+}
+
+.futurPath svg {
+  position: fixed;
+  top: 75px;
+  left: 85%;
+  width: auto;
+  height: 81%;
+    transform: translate(0, 100vh);
+
+}
+
+
+
+
+
+#herman {
+  position: absolute;
+  top: 75px;
+  left: 83.5%;
+}
+
+.futurPath svg path {
+  top: 55px; /* celui de marge initiale*/ 
+  left: 85%; /* right ne marche pas alors left = ok */
+
+
+}
+
+
+.futurPath {
+/*   width: 20%; pas oblige sauf pour centrer
+
+padding-top: 25px;
+padding-bottom: 27px;
+position: fixed;
+
+
+
+/* justify-content: space-between; */
+
+
+/*    Ne sert a rien c un seul svg et plusieurs paths */
+/*      flex-direction: column;
+  align-items: center;
+  display: flex; */
+ 
+
+/*   height :  calc(100vh - 55px - 30px);*/ /* on peut automatiser en var padding to et bottom */ 
+
+
+}
+
+
+/* marges initiales ne marchent pas sur du fixed, crée des bugs : calculer en %*/ 
+/* margin auto 0  => right = 100- 75% pour la marge + gratter sur la colonne*/ 
+
+
+    .margesInitiales { 
+  padding-top: 55px;
+  padding-bottom: 30px;
+
+}
+
+
+
+
+    #line {
+/*       position: fixed; */
+      background: black;
+      left : 90%;
+      top:75px;
+    }
+
+
+
+/* 
+    #line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ */
+
+.scrollContenu h3 span {
+  font-family: "moul";
+  font-weight: 200;
+  font-size: 1.5em;
+  line-height: 1em;
+  padding-bottom: 7px;
+
+}
+
+.scrollContenu span {
+  display: block;
+
+}
+
+
+.scrollContenu div{
+  font-family: "doppioOne";
+  font-size: 16.5px;
+font-style: normal;
+font-weight: 400;
+line-height: 27.951px;
+padding-bottom: 10px;
+
+
+}
+
+.resultatDet {
+  padding-left: 10%;
+}
+
+
+.ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border: 2px solid #000;
+  color: #000;
+/*   pointer-events: none; */
+  background-color:#E3E4FA;
+  
+  display : flex;
+  align-items : center;
+  align-content :center;
+  text-align: center;  
+  
+   transform-origin:50% 50%;
+  
+}
+
+.ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border: 2px solid var(--blanc);
+  color: var(--blanc);
+/*   pointer-events: none; */
+
+  background-color:transparent;
+  
+  display : flex;
+  align-items : center;
+  align-content :center;
+  text-align: center;  
+  
+   transform-origin:50% 50%;
+  
+}
+
+.block {
+  width:100%;
+  text-align: center;
+
+}
+
+.souris {
+  position: absolute;
+  transform-origin:center;
+/*   top: 50vh;
+  left: 50vw; */
+    transform-origin:50% 50%;
+}
+  
+
+
+/* ELEMENTS */
+.cpt{
+  transform-origin: 50px 50px;
+
+  
+}
+
+.lienPageIndex {
+  position: absolute; 
+  width: 130vw;
+   height:130vh ; 
+   top:-30vh; 
+   left:-5vw ; 
+/*    background-color: black; */
+  
+
+}
+
+.composant {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ 
+  z-index: 4;
+
+  
+/*   background-color: pink; */
+
+}
+.questionsMenu {
+  display: flex;
+  height: 100%;
+  gap: 10px;
+
+}
+
+.questionsMenu a{
+/*     padding-right: 10px; */
+    width: 20px;
+    height: 20px;
+    background-color: red;
+
+}
+
+
+
+.questionsMenu svg {
+    stroke: black;
+    fill :  transparent ;
+
+}
+
+.questionsMenu circle{
+    stroke-width: 5px ;
+    stroke: black;
+    fill: transparent;
+
+}
+
+
+
+.ourson {
+  mix-blend-mode: overlay;
+}
+/* 
+.light {
+  mix-blend-mode: hard-light;
+} */
+
+.sous-titres span {
+  display: block;
+  font-size: 19px; 
+  color: var(--rouge_profond);
+  line-height: 23.5px;
+}
+.sous-titres  {
+  display: block;
+  padding-top: 44px;
+      margin: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+svg {
+  overflow:visible;
+}
+
+index {
+  z-index: -1000;
+}
+
+/* le contenant est absolute aussi et au dessus relative pour contenir */
+#soleilA {
+  position: absolute;
+  top: 80%;
+  left: 5;
+
+}
+
+
+#soleilB {
+  position: absolute;
+    top: 30%;
+    left: 90%;
+}
+
+#soleilC {
+  position: absolute;
+    top: 20%;
+    left: 25%;
+
+}
+
+#soleilD {
+  position: absolute;
+    top: 15%;
+    left: 55%;
+
+
+}
+
+#svg-track {
+  position: absolute;
+  min-width: 100vw !important;
+  width: 100vw !important;
+  height: 100%;
+
+}
+
+#background {
+  position: fixed;
+  content: "";
+  width: 15px;
+  height: 15px;
+  transform-origin: center;
+  background-color: black;
+
+  border-radius: 50%;
+/*   transform: scale(1, 1); */
+  z-index: 3;
+
+
+
+}
+
+#transition {
+  position: absolute;
+  transform-origin: 50% 50%;
+  
+  width: 20px;
+  height: 20px;
+  transform : scale(0, 0);
+  transform-origin: center;
+  background-color: var(--blanc);
+
+  border-radius: 50%;
+  opacity: 1;
+  z-index: 100;
+
+  overflow: hidden;
+
+
+
+}
+
+
+
+.divLink {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: -1; /* au dessus du texte, sous les liens
+   qui ont un z-index de 10 : */
+/*    background-color: lavender;  *//*voir la couche dessus ou dessous ? */
+/* background-color: red; */
+
+}
+
+#lienCercle {
+  transform-origin: 50.168% 50.168%;
+  transform: scale(10);
+
+}
+
+
+/* a injecter */
+.lienFond {
+  height: 100%;
+  width: 100vw;
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform : scale(0.85);
+  opacity: 0;
+  color: white;
+  z-index : -100;
+  
+
+}
+
+.colomneLienFond {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin: 0 auto;
+  width: 89%; */
+  
+
+}
+
+
+
+.paddingl {
+/*     width: calc(55% - 20px);
+    margin: 0 auto;
+    padding-left: 5%; 
+    padding-right: 10px; */
+/*     distance avec la scroll bar a droite et left pour garantir sa presence pas trop excentree */
+
+/*     /test parfait pas de span pour injecter ici bon en min 1024px */
+
+}
+
+.info  {
+
+  max-height: 225px;
+  overflow-y: scroll;
+  color: var(--theme_clair);
+  font-family: "doppioOne";
+  font-size: 15.4px;
+
+  font-weight: 50;
+  line-height: 20.951px; /* 145.492% */
+
+
+}
+
+.info::-webkit-scrollbar-track
+{ 
+/*   box-shadow: inset 0 0 5px F2F2F2;  */
+   
+/*   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+  
+/*   sans background color pour une transition sur fond qui ne choque pas dans les couleurs => var° d'opacite */
+}
+
+.info::-webkit-scrollbar
+{
+  width: 3px;
+
+/*   on cree la longueur... */
+
+  
+}
+
+.info::-webkit-scrollbar-thumb
+{
+/*   à droite ça crée donc une marge */
+
+ background-color: var(--theme_clair);
+
+
+  
+}
+
+
+
+
+
+.flexColomneEloigne {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between ;
+  
+  justify-content: space-between;
+  height: 61%;
+  width:55% ;
+  align-items: center
+
+}
+
+
+
+
+.boutCentre {
+  
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.source p {
+  color: var(--blanccreme, #F7E4E1);
+  font-family: "kodchasan-medium";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 20.951px;
+  padding-bottom :  0px;
+  marging-bottom :  0px;
+
+}
+
+.boutCentre .indice {
+  will-change: transform;
+    position: absolute;
+    left: -2.45em;
+    top: 30%;
+    height: 7px;
+    width: 7px;
+    border-bottom-left-radius: 50%;
+    background: var(--blanc_creme);
+    transform-origin: right;
+    clip-path: polygon( 0 10%, 10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10% );
+    transition: transform .6s cubic-bezier(.33,1,.68,1) .1s;
+    transform: scale(0, 0);
+
+}
+
+
+
+.source a {
+  color: var(--themeclair, #F0BCB2);
+  font-family: "doppioOne";
+  font-size: 9.5px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 13.3px; 
+  position: relative;
+
+
+}
+
+.indiceTitre {
+  color :  var(--blanc_creme);
+  padding-top: 25px;
+  text-align: center;
+font-family: Moul;
+font-size: 19.5px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+}
+
+.sourcea {
+  transform: scale(1.0);
+
+}
+
+.boutCentre a:hover .indice {
+  transform: scale(1.1);
+
+}
+
+.sourcea:hover  {
+
+  transform: scale(1.033);
+  transition: 0.7s;
+  transform-origin: left;
+
+
+}
+
+/* //transition sur les objets svg direct pas un bloc autour div */
+
+.croix svg{ 
+  display: block;
+  padding: 10px;
+  fill: white;
+  transform: scale(1, 1);
+  transition: all .3s cubic-bezier(0.2, 0.58, 0.58, 0.88);
+  transform-origin: center;
+
+}
+
+.croix:hover svg  {
+  transform: scale(1.2);
+
+}
+
+
+
+
+.inventaireHaut {
+
+
+  position: absolute;
+
+/*   parfois au top dans la stack(index) = mieux */
+  z-index: 1; 
+
+
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 8px;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+
+
+}
+
+.inventaireHaut img:nth-child(n) {
+  position: relative;
+    top :  45px;
+    left : calc(100vw - 120px); 
+    padding-bottom: 65px;
+    content:url("/images/ROND_hover1.png");
+    width: auto;
+    height: auto;
+    
+
+
+} 
+
+.inventaireHaut img:nth-child(n+3) {
+  position: relative;
+  padding-bottom: 65px;
+  left : 0 ;
+  content:url("/images/ROND_hover0.png");
+  width: auto;
+    height: auto;
+
+}
+
+#rep0 {
+  content:url("/images/iconesIndices/teddy0.png");
+    width: 56px;
+    height: 56px;
+/*     on pourrait recuperer directement le width depuis l'image injectee la c pas pratique */
+
+}
+
+#rep1 {
+  content:url("/images/iconesIndices/teddy1.png");
+  width: 56px;
+    height: 56px;
+
+
+}
+
+#rep2 {
+  content:url("/images/iconesIndices/teddy2.png");
+  width: 56px;
+    height: 56px;
+
+}
+
+#rep3 {
+  content:url("/images/iconesIndices/teddy3.png");
+  width: 56px;
+    height: 56px;
+
+}
+
+
+.espaceInventaireBas {
+/*   background-color: red;
+/*   transform : translate(0, 40px); */
+
+/*   toujours pourcents pour le top */
+
+
+}
+
+.inventaireBas {
+
+    left : 0 ;
+
+  position: absolute;
+
+/*   parfois au top dans la stack(index) = mieux */
+  z-index: 1; 
+
+  width: 60px;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 8px;
+
+  display: flex; 
+  flex-direction: column;
+  background-color: red;
+
+
+
+}
+
+
+
+.pointer:hover {
+  cursor: pointer;
+
+}
+
+
+.explosion {
+  position: absolute;
+  top: calc(50% - 80px);
+  left: 15%;
+}
+
+.reponseFond {
+  background-color: var(--soda_fond);
+}
+
+
+
+

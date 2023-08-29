@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Castor et Pollux Sombre</title>
+  </head>
+
+
+   <section data-barba = "wrapper"> <!--pour ne pas avoir a click => terminer la page precende, pas obliger de mettre hors du body je pense mais surtout prendre le contenu qui nuit à la transition => click sur le dom sinon nul, !!! -->
+      <article data-barba = "container" data-barba-namespace="home">
+
+  <body> <!--mettre padding margin 0 pour le fond -->
+      
+
+   
+    <header class="headerTop"><!--  setup fixed (détaché du DOM) ++ full width -->
+       <div class=" content"><!-- marges en enfants ++ marges -->
+        <nav> <!-- space between -->
+          <a class="lienhover" id ="accueil" href="index.html">JADE PERESSON</a> <!--une image -->
+          <a id="menu" class="textMenu lienhover" href="question.html">Contacts</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+  <!-- ESSAYER EN CSS -->
+
+      <div style="background-color: var(--theme_clair)" class="fond"> <!-- position relative et taille 100% 100vh -->
+           
+        <div class="base"> <!-- display row pour align-content possible avec items ++ full width 100%100% pour hériter-->
+          <div id="transition"></div> <!--IMPERATIVEMENT LA -->
+           <div style = "padding-bottom:85px;" class="centrer content relative"> <!--maintenant on met le display column ++ marges-->
+             <div class="composant">
+              <a href="question.html"  class="divLink"> </a> 
+      <!-- note sur le lien qui fait partie des elements movibles => car ils bougent avec detection de mouseevent -->
+
+       
+<!--            <img id = "soleilA" src="/images/Ourson.png" height="300px" width="auto" class="cpt" >
+
+          <img id = "soleilB" src="/images/Ourson.png" height="300px" width="auto" class="cpt" >
+
+           <img id = "soleilC" src="/images/Ourson.png" height="100px" width="auto" class="cpt">
+
+          <img id = "soleilD" src="/images/Ourson.png" height="30px" width="auto" class="cpt"> -->
+
+
+       
+          <!-- FORMES COMPOSEES -->
+          <div id = "cibleBas1">
+            <img  class="cpt" src="/images/ROND_BAS_NATURE_FILL.png" height="auto" width="auto">
+            <img  id = "cibleinterieur0" src="/images/ROND_BAS_INTERIEUR.png" height="auto" width="auto">
+          </div>
+
+          <div id = "cibleHaut1">
+            <img  class="cpt" src="/images/ROND_HAUT_NATURE_FILL.png" height="auto" width="auto">
+            <img  id = "cibleinterieur1" src="/images/ROND-HAUT_INTERIEUR.png" height="auto" width="auto">
+          </div>
+
+
+
+<!--        <img id = "cercle3" src="/images/Cercle.png" height="30px" width="auto" class="cpt">
+       <img id = "cercle4" src="/images/Cercle.png" height="30px" width="auto" class="cpt">
+       <img id = "cercle5" src="/images/Cercle.png" height="30px" width="auto" class="cpt">
+       <img id = "cercle6" src="/images/Cercle.png" height="30px" width="auto" class="cpt">
+       <img id = "cercle7" src="/images/Cercle.png" height="30px" width="auto" class="cpt">
+       -->
+
+
+
+        </div>
+
+
+            <img id = "lignesInitiales1" src="/images/lignesHautVerticale.png" height="auto" width="auto" class="cpt">
+            <img id = "lignesInitiales0" src="/images/lignesBasVertical.png" height="auto" width="auto" class="cpt">
+
+            <img id = "lignesInitialesHorizontale1" src="/images/lignesHautHorizontal.png" height="auto" width="auto" class="cpt">
+            <img id = "lignesInitialesHorizontale0" src="/images/lignesBasHorizontal.png" height="auto" width="auto" class="cpt">
+
+          
+            <div class="boxAnimation">
+      <!--         <div class="animationTitre">
+                <div class="animationTitres debutAnimationTitre" >&nbsp;L'ANIMATION&nbsp; </div> 
+                <img class="points animationTitres" src="/images/Ellipse.png" height=6px width="auto">
+                <div class="animationTitres" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp; </div
+                > 
+                <img class="points animationTitres" src="/images/Ellipse.png" height="auto" width="auto">
+                <div class="animationTitres" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp; </div
+                > 
+                <img class="points animationTitres" src="/images/Ellipse.png" height="auto" width="auto">
+                <div class="animationTitres" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp; </div
+                > 
+                <img class="points animationTitres" src="/images/Ellipse.png" height="auto" width="auto">
+                <div class="animationTitres" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp; </div
+                > 
+                <img class="points animationTitres" src="/images/Ellipse.png" height="auto" width="auto">
+                <div class="animationTitres" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp;</div
+                > 
+                <img class="points animationTitres" src="/images/Ellipse.png" height="auto" width="auto">
+                <div class="animationTitres" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp; </div
+                > 
+                <img class="points animationTitres" src="/images/Ellipse.png" height="auto" width="auto">
+                <div class="animationTitres" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp; </div
+                > 
+                <img class="points animationTitres" src="/images/Ellipse.png" height="auto" width="auto">
+                <div class="animationTitres" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp; </div
+                > 
+                <img class="points animationTitres" src="/images/Ellipse.png" height="auto" width="auto">
+                <div class="animationTitres" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp;</div
+                > 
+                <img class="points animationTitres" src="/images/Ellipse.png" height="auto" width="auto">
+              </div>
+                 -->
+
+      <!-- bon ratio de mots et de flex dans le css pour les items je n'ai bouge que le flex % pris et le nombre d'irem en ctrl+D-->
+      <div class="cb-tagreel-row">
+        <div class="cb-tagreel-item"><span>L'ANIMATION</span></div>
+        <div class="cb-tagreel-item"><span>L'ANIMATION</span></div>
+        <div class="cb-tagreel-item"><span>L'ANIMATION</span></div>
+        <div class="cb-tagreel-item"><span>L'ANIMATION</span></div>
+        <div class="cb-tagreel-item"><span>L'ANIMATION</span></div>
+        <div class="cb-tagreel-item"><span>L'ANIMATION</span></div>
+        <div class="cb-tagreel-item"><span>L'ANIMATION</span></div>
+        <div class="cb-tagreel-item"><span>L'ANIMATION</span></div>
+
+      </div>
+      <!-- <div class="cb-tagreel-row">
+        <div class="cb-tagreel-item -stroke"><span>Design</span></div>
+        <div class="cb-tagreel-item"><span>Design</span></div>
+        <div class="cb-tagreel-item -stroke"><span>Design</span></div>
+        <div class="cb-tagreel-item"><span>Design</span></div>
+        <div class="cb-tagreel-item -stroke"><span>Design</span></div>
+      </div>
+      <div class="cb-tagreel-row">
+        <div class="cb-tagreel-item"><span>Development</span></div>
+        <div class="cb-tagreel-item -stroke"><span>Development</span></div>
+        <div class="cb-tagreel-item"><span>Development</span></div>
+        <div class="cb-tagreel-item -stroke"><span>Development</span></div>
+        <div class="cb-tagreel-item"><span>Development</span></div>
+      </div> -->
+
+
+                
+  <!--             </h2>
+
+              <h2 class="avantanimationTitre">
+                <div class="avantanimationTitres debutavantAnimationTitre" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp; </div> 
+
+                <img class="points avantanimationTitres" src="/images/Ellipse.png" height=6px width="auto">
+
+                <div class="avantanimationTitres" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp; </div
+                > 
+                <img class="points avantanimationTitres" src="/images/Ellipse.png" height="auto" width="auto">
+                <div class="avantanimationTitres" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp; </div
+                > 
+                <img class="points avantanimationTitres" src="/images/Ellipse.png" height="auto" width="auto">
+                <div class="avantanimationTitres" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp; </div
+                > 
+                <img class="points avantanimationTitres" src="/images/Ellipse.png" height="auto" width="auto">
+                <div class="avantanimationTitres" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp; </div
+                > 
+                <img class="points avantanimationTitres" src="/images/Ellipse.png" height="auto" width="auto">
+                <div class="avantanimationTitres" >&nbsp;&nbsp;L'ANIMATION&nbsp;&nbsp;</div
+                > 
+                <img class="points avantanimationTitres" src="/images/Ellipse.png" height="auto" width="auto">  
+
+          
+              </h2>
+ -->
+          </div>
+
+
+            <h2 id="premierTitre">PREMIER CHAPITRE</h2>
+        
+            <div class="sous-titres">
+              <span>L’animation fait partie intégrante d’un site web prometteur avec un lien très naturel</span>
+              <span>à l’UX/UI. Je propose ici de découvrir un petit chemin - exercice - d’animation.</span>
+            </div>
+
+          
+
+
+
+          </div>
+
+        </div>
+
+         </div> 
+
+
+
+  
+    </div>
+    </main>
+
+
+
+    <header class="headerBottom">
+      <div class="content">
+       <nav>
+        <div class="groupeLiens">
+           <div class="navBottomBord"> <!-- adieu ul, padding de base -->
+             <span class="awrapper"><a href="#" class="textMenu lienhover">Instagram</a></span>
+             <span class="awrapper"><a href="#" class="textMenu lienhover">Artstation</a></span>
+           </div>
+         </div>
+         <a href="#" class="lien textMenu lienhover">M’envoyer un mail</a>
+         <a href="#" class="textMenu lienhover">*Je suis développeuse et designer, 3D.</a>
+        </nav>
+
+      </div> 
+    </header>   
+
+
+   
+
+    </div> 
+
+
+  <div id="background"></div>
+
+    
+  <div class="souris">
+    <div class="ball">
+      <div class="block">Bonbon</div>
+    </div>
+  </div>
+
+ <!--  <div>
+    <img id = "fondDroit" src="/images/FondDroit.png">
+    <img id = "fondGauche" src="/images/FondGauche.png">
+  </div> -->
+ 
+
+
+ 
+
+
+    <script src="/gsap-public/umd/gsap.js"></script>
+
+ 
+    <script type="module" src="/scripts/script.js"></script>
+
+    <script type="module" src="/transitions/entree.js"></script>
+
+
+  
+
+  </body>
+
+</section>
+</article>    
+
+
+</html>
